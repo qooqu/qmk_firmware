@@ -1,3 +1,38 @@
+# dave notes
+
+make changes in
+```
+keyboards/crkbd/keymaps/qooqu
+```
+
+then run
+```
+qmk compile
+```
+
+open folder with the uf2 firmware
+```
+cd /Users/dave/qmk_firmware
+f.
+```
+
+open the right half of the keyboard in boot mode
+1. unplug the usb power from the keyboard
+1. unplug the trs cable? not sure this is necessary
+1. update the right half
+  1. open the right half in bootmode
+    1. hold down "p" and plug in usb
+    1. it should show up in finder as a new drive called RPI-PR2
+  1. upload the firmware
+    1. drag the uf2 into the new drive
+    1. the new drive will closee itself and mac will complain. this is annoying, but normal
+  1. unplug the usb
+1. repeat for the left half. "w" is the bootmode key
+
+
+
+
+
 # Quantum Mechanical Keyboard Firmware
 
 [![Current Version](https://img.shields.io/github/tag/qmk/qmk_firmware.svg)](https://github.com/qmk/qmk_firmware/tags)
