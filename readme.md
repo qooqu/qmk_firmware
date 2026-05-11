@@ -30,7 +30,7 @@ open the right half of the keyboard in boot mode
 1. repeat for the left half. "q" (one in from top left) is the bootmode key
 1. make sure you unplugged the usb
 1. connect the two halves with the trs
-2. plug the left half into the usb
+1. plug the left half into the usb
 
 
 

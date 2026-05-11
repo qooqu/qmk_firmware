@@ -29,7 +29,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [1] = LAYOUT_split_3x6_3(
         TO(0),   XXXXXXX, XXXXXXX, XXXXXXX, KC_LSFT, XXXXXXX,      XXXXXXX, KC_PGUP, KC_UP,   KC_PGDN, XXXXXXX, XXXXXXX,
         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,      XXXXXXX, KC_LEFT, KC_DOWN, KC_RGHT, XXXXXXX, XXXXXXX,
-        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,      KC_F1,   KC_F2,   KC_F11,  KC_F12,  XXXXXXX, XXXXXXX,
+        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,      XXXXXXX, KC_F1,   KC_F2,   KC_F11,  KC_F12,  XXXXXXX,
                                    _______, _______, _______,      _______, _______, _______
     ),
 
@@ -43,7 +43,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [3] = LAYOUT_split_3x6_3(
         LSFT(KC_GRV), LSFT(KC_1), LSFT(KC_2), LSFT(KC_3), LSFT(KC_4), LSFT(KC_5),      LSFT(KC_6),   LSFT(KC_7),   LSFT(KC_8),    LSFT(KC_9),    LSFT(KC_0),   LSFT(KC_SCLN),
              KC_GRV,  XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,         LSFT(KC_EQL),      KC_MINS, LSFT(KC_MINS),      KC_LBRC,       KC_RBRC,      KC_SCLN,
-             XXXXXXX, XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,              KC_BSLS,      KC_EQL,  LSFT(KC_BSLS), LSFT(KC_LBRC), LSFT(KC_RBRC), XXXXXXX,
+             XXXXXXX, XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,              KC_BSLS,      KC_EQL,  LSFT(KC_BSLS), LSFT(KC_LBRC), LSFT(KC_RBRC),     XXXXXXX,
                                                        _______, _______, _______,      _______, _______, _______
     ),
 
