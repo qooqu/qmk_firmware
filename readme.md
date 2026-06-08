@@ -25,12 +25,12 @@ open the right half of the keyboard in boot mode
     1. it should show up in finder as a new drive called RPI-PR2
   1. upload the firmware
     1. drag the uf2 into the new drive
-    1. the new drive will closee itself and mac will complain. this is annoying, but normal
+    1. the new drive will close itself and mac will complain. this is annoying, but normal
   1. unplug the usb
 1. repeat for the left half. "q" (one in from top left) is the bootmode key
 1. make sure you unplugged the usb
 1. connect the two halves with the trs
-1. plug the left half into the usb
+1. plug in the usb
 
 
 
