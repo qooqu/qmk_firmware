@@ -12,7 +12,7 @@ qmk compile
 
 open folder with the uf2 firmware
 ```
-cd /Users/dave/qmk_firmware
+cd ~/Repos/qmk_firmware
 f.
 ```
 
@@ -32,6 +32,41 @@ open the right half of the keyboard in boot mode
 1. connect the two halves with the trs
 1. plug in the usb
 
+
+# visualize the keymap
+
+quick look. needs `uv`, nothing else to install
+```
+qmk c2json -kb crkbd/rev4_1/standard -km qooqu --no-cpp -o /tmp/qooqu.json
+uvx --from keymap-drawer keymap parse -q /tmp/qooqu.json -o /tmp/qooqu.yaml
+uvx --from keymap-drawer keymap draw /tmp/qooqu.yaml > /tmp/qooqu.svg
+open /tmp/qooqu.svg
+```
+
+or drop `/tmp/qooqu.json` into a browser
+1. https://keymap-drawer.streamlit.app for the same picture
+1. https://config.qmk.fm for the interactive configurator view. it flags `SEMI_ZERO` as unknown
+
+gotchas
+1. `-kb crkbd/rev4_1` is rejected, it needs the `/standard` (or `/mini`) leaf
+1. `--no-cpp` is what gets it past the `SEMI_ZERO` custom keycode
+1. shifted symbols draw as `!` `@` `#` because the keymap uses the `KC_EXLM` aliases from `keymap_us.h`. plain `LSFT(KC_1)` would draw as "Sft+1" instead
+1. the encoder map is not drawn, keymap-drawer has no notion of encoders
+1. don't use `magick` to turn the svg into a png, the local imagemagick is not librsvg-backed and mangles keymap-drawer's css
+
+# keymap as the desktop picture
+
+```
+viz/make-keymap-wallpaper.sh
+```
+
+writes `~/Pictures/qooqu-keymap-wallpaper.png`, 1920x1200, layers in two columns with hairline dividers between them. then finder right-click > set desktop picture. it can't be set from the terminal, that needs automation permission
+
+1. macos desktop pictures have no alpha, a transparent png goes black. so the background color is painted into the image
+1. `BG` in the script is `#00c0e8`, the system color "cyan" my desktop was set to. change it there if the desktop color changes
+1. it works from any cwd, it finds the repo relative to itself
+1. supporting files sit next to it in `viz/`. `keymap-wallpaper-config.yaml` is the keymap-drawer draw config, `gridify.py` adds the divider lines and the spacing between layer rows
+1. `shifted-legends.py` draws the shift value above `, . / '` on L0. add to `PAIRS` in it for more keys. it is L0 only on purpose, on the number layer a `?` over `/` is just noise
 
 
 

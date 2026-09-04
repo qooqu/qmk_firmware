@@ -1,0 +1,11 @@
+draw_config:
+  n_columns: 2
+  outer_pad_w: 40.0
+  outer_pad_h: 72.0
+  svg_extra_style: |
+    svg.keymap { background-color: #00c0e8; }
+    /* keymap-drawer puts the shifted legend on the key's top edge, where it
+       overhangs the rect, and leaves the tap legend dead center. nudge the
+       pair down so it sits inside the key like a real keycap legend. */
+    svg.keymap text.shifted { transform: translateY(6px); }
+    svg.keymap g.key:has(text.shifted) text.tap { transform: translateY(4px); }
