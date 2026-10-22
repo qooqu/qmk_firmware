@@ -5,32 +5,19 @@ make changes in
 keyboards/crkbd/keymaps/qooqu
 ```
 
-then run
+then flash, one half at a time
 ```
-qmk compile
-```
-
-open folder with the uf2 firmware
-```
-cd ~/Repos/qmk_firmware
-f.
+qmk flash -kb crkbd/rev4_1/standard -km qooqu
 ```
 
-open the right half of the keyboard in boot mode
-1. unplug the usb power from the keyboard
-1. unplug the trs cable? not sure this is necessary
-1. update the right half
-  1. open the right half in bootmode
-    1. hold down "p" (one in from top right) and plug in usb
-    1. it should show up in finder as a new drive called RPI-PR2
-  1. upload the firmware
-    1. drag the uf2 into the new drive
-    1. the new drive will close itself and mac will complain. this is annoying, but normal
-  1. unplug the usb
-1. repeat for the left half. "q" (one in from top left) is the bootmode key
-1. make sure you unplugged the usb
-1. connect the two halves with the trs
-1. plug in the usb
+1. plug the usb into the half you're flashing
+  - you don't have to unplug the trs cable
+1. run the `qmk flash` command. it builds, then waits for the boot drive
+1. hold the key under `;0` and tap p (or q). that half reboots into boot mode, the drive mounts and the copy runs by itself
+1. move the usb to the other half and repeat
+1. the boot combo only resets the half the usb is plugged into, which is the one you're flashing anyway
+
+if the boot combo isn't there (fresh board, broken firmware): run `qmk flash`, unplug, and hold p (right half) or q (left half) while plugging in the usb
 
 
 # mac / linux toggle
