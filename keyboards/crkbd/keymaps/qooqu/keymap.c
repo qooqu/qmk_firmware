@@ -37,7 +37,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [0] = LAYOUT_split_3x6_3_ex2(
         KC_ESC,  KC_Q, KC_W, LT(1, KC_E), LT(4, KC_R), KC_T,  KC_CAPS,      SEMI_ZERO, KC_Y,       KC_U,  KC_I,    KC_O,   KC_P,    KC_BSPC,
-        KC_TAB,  KC_A, KC_S, LT(2, KC_D), LT(3, KC_F), KC_G,  XXXXXXX,      XXXXXXX,   KC_H, LT(3, KC_J), KC_K,    KC_L,   KC_QUOT, KC_ENT,
+        KC_TAB,  KC_A, KC_S, LT(2, KC_D), LT(3, KC_F), KC_G,  CG_TOGG,      XXXXXXX,   KC_H, LT(3, KC_J), KC_K,    KC_L,   KC_QUOT, KC_ENT,
         KC_LSFT, KC_Z, KC_X,       KC_C,        KC_V,  KC_B,                           KC_N,       KC_M,  KC_COMM, KC_DOT, KC_SLSH, KC_RSFT,
                                             KC_LCTL, KC_LALT, KC_LGUI,      RGUI_T(KC_SPC), KC_RALT, KC_RCTL
     ),

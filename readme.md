@@ -33,6 +33,19 @@ open the right half of the keyboard in boot mode
 1. plug in the usb
 
 
+# mac / linux toggle
+
+the key under caps lock (`CG_TOGG`) switches between mac and linux modifiers
+```
+mac:    lctrl  lalt  lcmd     |  rcmd/space   ralt  rctrl
+linux:  lsuper lalt  lctrl    |  rctrl/space  ralt  rsuper
+```
+
+1. it swaps ctrl and gui on both sides, including what space does when held
+1. the setting is saved on the keyboard, so it boots in whichever mode it was last in
+1. there's no indicator. to check, press the thumb key next to space: on linux it should act as ctrl
+
+
 # visualize the keymap
 
 quick look. needs `uv`, nothing else to install
